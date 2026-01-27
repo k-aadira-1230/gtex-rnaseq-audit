@@ -49,7 +49,7 @@ Subset used in this study:
    - Remove lowly expressed genes to reduce noise
    
 4. Normalization:
-   - Apply variance-stabilizing or log-based noemalization
+   - Apply variance-stabilizing or log-based normalization
 
 5. Exploratory analysis:
    - PCA for global structure  
