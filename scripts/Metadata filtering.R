@@ -2,8 +2,8 @@
 library(tidyverse)
 
 #loading metadata
-sample_meta<-read_tsv("C:/Users/aadirakr2020/Desktop/Audit/GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt", show_col_types=FALSE)
-subject_meta<-read_tsv("C:/Users/aadirakr2020/Desktop/Audit/GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt", show_col_types=FALSE)
+sample_meta<-read_tsv("data/metadata/GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt", show_col_types=FALSE)
+subject_meta<-read_tsv("data/metadata/GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt", show_col_types=FALSE)
 
 #Filtering brain-cortex samples
 cortex_samples <- sample_meta %>%
@@ -37,4 +37,4 @@ cortex_70<-cortex_meta %>%
   sample_n(70)
 
 #Saving filtered metadata
-write_tsv(cortex_70, "C:/Users/aadirakr2020/Desktop/Audit/GTEx_Brain_Cortex_metadata_70samples.tsv")
+write_tsv(cortex_70, "data/metadata/GTEx_Brain_Cortex_metadata_70samples.tsv")
