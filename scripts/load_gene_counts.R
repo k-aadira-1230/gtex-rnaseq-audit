@@ -2,7 +2,7 @@ library(data.table)
 library(tidyverse)
 
 # Loading gene counts
-counts <- fread("C:/Users/aadirakr2020/Desktop/Audit/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct.gz",
+counts <- fread("data/raw/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct.gz",
   skip = 2)
 
 # Extracting cortex sample IDs
@@ -32,5 +32,5 @@ storage.mode(counts_mat) <- "numeric"
 summary(colSums(counts_mat))
 
 # Saving processed data
-saveRDS(counts_mat, "C:/Users/aadirakr2020/Desktop/Audit/counts_mat_cortex_70.rds")
-saveRDS(cortex_expr_meta, "C:/Users/aadirakr2020/Desktop/Audit/metadata_cortex_70.rds")
+saveRDS(counts_mat, "data/processed/counts_mat_cortex_70.rds")
+saveRDS(cortex_expr_meta, "data/processed/metadata_cortex_70.rds")
