@@ -43,6 +43,6 @@ ggplot(pca_plot_df, aes(PC1, PC2, color = anomaly)) +
     color = "Sample type"
   )
 
-saveRDS(pca_df, "data/processed//isolation_forest_scores.rds")
+saveRDS(pca_df, "results/ml/isolation_forest_scores.rds")
 
-ggsave("data/processed/isolation_forest_pca.png", width = 6, height = 5, dpi = 300)
+ggsave("results/pca/isolation_forest_pca.png", width = 6, height = 5, dpi = 300)
