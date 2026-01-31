@@ -14,11 +14,13 @@ ggplot(pca_df, aes(astro_score, if_score, color = anomaly)) +
   geom_point(size = 3) +
   theme_classic() +
   labs(x = "Astro score", y = "Isolation Forest score")
+ggsave("results/pca/astro_vs_ifscore")
 
 ggplot(pca_df, aes(neuron_score, if_score, color = anomaly)) +
   geom_point(size = 3) +
   theme_classic() +
   labs(x = "Neuron score", y = "Isolation Forest score")
+ggsave("results/pca/neuron_vs_ifscore")
 
 #Wilcox test to see if correlation is statistically significant
 wilcox.test(pca_df$astro_score[pca_df$anomaly == "Typical"],
